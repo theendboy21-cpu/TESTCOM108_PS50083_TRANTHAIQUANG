@@ -16,43 +16,31 @@ double nhapSanLuongWh() {
     return wh;
 }
 
-// 2. Hàm quy đổi điện năng từ Wh sang kWh
-// 1 kWh = 1000 Wh
-double quyDoiWhToKwh(double wh) {
-    return wh / 1000.0;
+// 2. Hàm quy đổi điện năng từ Wh sang kWh (Đã đổi tên theo đúng test case)
+double doiWhSangKwh(double wh) {
+    return(double) wh / 1000; // Sử dụng 1000.0 để ép kiểu số thực
 }
 
 // 3. Hàm tính cước phí
-// Tham số: dienNangKwh (số kWh đã nạp), donGia (đơn giá trên mỗi kWh)
 double tinhCuocPhi(double dienNangKwh, double donGia) {
     return dienNangKwh * donGia;
 }
 
-// Hàm main
 int main() {
-    // Biến lưu trữ dữ liệu
     double whDaNap;
     double kwh;
-    double donGia = 2500.0; // Ví dụ: Đơn giá là 2500 VND/kWh
+    double donGia = 2500.0; 
     double tongCuocPhi;
 
-    // Gọi hàm kiểm định sản lượng
     whDaNap = nhapSanLuongWh();
 
-    // Gọi hàm quy đổi điện năng
-    kwh = quyDoiWhToKwh(whDaNap);
+    // Gọi đúng tên hàm mới
+    kwh = doiWhSangKwh(whDaNap);
 
-    // Gọi hàm tính cước phí
     tongCuocPhi = tinhCuocPhi(kwh, donGia);
 
-    // In ra màn hình
-    // Wh đã sạc (số nguyên hoặc số thực tùy ý, ở đây in số thực gốc)
     printf("San luong da nap: %.2f Wh\n", whDaNap);
-    
-    // kWh (2 chữ số thập phân)
     printf("Dien nang quy doi: %.2f kWh\n", kwh);
-    
-    // Tổng cước phí
     printf("Tong cuoc phi: %.2f VND\n", tongCuocPhi);
 
     return 0;
