@@ -1,8 +1,8 @@
 # NHẬT KÝ THỰC HIỆN LAB 5 (LOGBOOK)
 
-* **Họ và tên:** 
-* **Mã sinh viên:** 
-* **Link Repository cá nhân:** 
+* **Họ và tên:** Tran Thai Quang
+* **Mã sinh viên:** PS500083
+* **Link Repository cá nhân:** https://github.com/theendboy21-cpu/TESTCOM108_PS50083_TRANTHAIQUANG
 
 ---
 
