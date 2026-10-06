@@ -18,7 +18,7 @@ double nhapSanLuongWh() {
 
 // 2. Hàm quy đổi điện năng từ Wh sang kWh (Đã đổi tên theo đúng test case)
 double doiWhSangKwh(double wh) {
-    return(double) wh / 1000; // Sử dụng 1000.0 để ép kiểu số thực
+    return wh / 1000.0; 
 }
 
 // 3. Hàm tính cước phí
