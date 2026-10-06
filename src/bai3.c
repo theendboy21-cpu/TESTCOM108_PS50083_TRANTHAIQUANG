@@ -34,5 +34,23 @@ int phanPhoiATM(int soTien, int *to500, int *to200, int *to100, int *to50) {
     // TODO: Viết code phân phối số tờ tiền và trả về tổng số tờ
     // Yeu cau: Tuyet doi khong dung lenh in ra man hinh ben trong ham nay
     
-    return 0;
+    // Tính số tờ mệnh giá 500.000 và lấy số tiền còn dư lại
+    *to500 = soTien / 500000;
+    soTien = soTien % 500000;
+
+    // Tính số tờ mệnh giá 200.000 từ số tiền dư và tiếp tục lấy số dư mới
+    *to200 = soTien / 200000;
+    soTien = soTien % 200000;
+
+    // Tính số tờ mệnh giá 100.000 và lấy số tiền dư còn lại
+    *to100 = soTien / 100000;
+    soTien = soTien % 100000;
+
+    // Tính số tờ mệnh giá 50.000 từ số tiền dư cuối cùng
+    *to50 = soTien / 50000;
+
+    // Tính tổng số tờ tiền đã được phân phối
+    int tongSoTo = *to500 + *to200 + *to100 + *to50;
+
+    return tongSoTo;
 }
